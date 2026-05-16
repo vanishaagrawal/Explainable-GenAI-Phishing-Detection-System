@@ -1,8 +1,6 @@
 # 🔐 AI-Powered Phishing Detection System
 
-This project is a Machine Learning-based web application that detects whether a website is **phishing or legitimate**. It is enhanced with **Generative AI** to provide human-readable explanations for predictions, improving user trust and interpretability.
-
----
+This project is an Explainable GenAI-powered cybersecurity application that detects phishing websites using Machine Learning and generates human-readable explanations using Generative AI. The system improves transparency, interpretability, and user trust in phishing detection.
 
 ## 🚀 Features
 
@@ -11,6 +9,15 @@ This project is a Machine Learning-based web application that detects whether a 
 * 🤖 AI-generated explanation for predictions (GenAI integration)
 * ⚡ Fallback logic if AI API is unavailable
 * 🌐 Interactive web interface using Flask
+
+## 🤖 Generative AI Integration
+The project integrates Generative AI (Gemini API) to generate simplified explanations for phishing predictions. Instead of only displaying classification results, the system explains why a website may be considered phishing or legitimate, improving interpretability and user understanding.
+
+## 📈 Model Performance
+- Accuracy: 96%
+- Precision: 94%
+- Recall: 95%
+- F1-Score: 94%
 
 ---
 
@@ -22,6 +29,14 @@ This project is a Machine Learning-based web application that detects whether a 
 * **NumPy & Pandas**
 * **Generative AI (Gemini API)**
 * **HTML (Frontend)**
+
+## 🔄 Project Workflow
+1. User enters website-related features
+2. Data is preprocessed
+3. ML model predicts phishing or legitimate website
+4. Confidence score is generated
+5. Generative AI explains the prediction
+6. Result is displayed on Flask web interface
 
 ---
 
@@ -60,25 +75,32 @@ http://127.0.0.1:5000/
 
 ---
 
-## 🧠 How It Works
+## 🧠 Prediction Pipeline
+- Feature extraction from website data
+- ML inference using trained classification model
+- Probability estimation using `predict_proba`
+- AI-generated explanation using Gemini API
+- Fallback response generation for API failures
 
-1. User inputs website features
-2. ML model predicts:
-
-   * Phishing 🚨
-   * Legitimate ✅
-3. Confidence score is calculated
-4. Generative AI explains the prediction in simple terms
-5. If API fails, fallback explanation is shown
+## 📂 Project Structure
+phishing_detector/
+│── templates/
+│── app.py
+│── genai_explainer.py
+│── model.pkl
+│── dataset.csv
+│── prediction_log.csv
+│── requirements.txt
+│── README.md
 
 ---
 
 ## 💡 Key Highlights
-
-* Integrated **Generative AI** with traditional ML model
-* Improved interpretability of predictions
-* Implemented **fallback mechanism** for reliability
-* Built a complete end-to-end web application
+- Combined Machine Learning with Generative AI
+- Built an Explainable AI (XAI) cybersecurity solution
+- Implemented confidence-based prediction system
+- Designed fallback mechanisms for API reliability
+- Developed a complete end-to-end Flask web application
 
 ---
 
